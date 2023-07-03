@@ -1,0 +1,86 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    color: #343a40;
+  }
+  
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  input[type="text"] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #28a745;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  li span {
+    font-size: 20px;
+  }
+  
+  li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  li button.edit {
+    background-color: #17a2b8;
+  }
+  
+  li div.edit-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  li input[type="text"] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #17a2b8;
+    border-radius: 4px;
+  }
+  
+  li button.save {
+    background-color: #17a2b8;
+  }
