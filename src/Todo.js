@@ -25,15 +25,15 @@ function App() {
   };
 
   const handleSaveTask = () => {
-    updateTask(editingTask.id, { text: editingText }).then((data) =>
-      setTasks(tasks.map((task) => (task.id === data.id ? data : task)))
-    );
+    updateTask(editingTask.id, { text: editingText }).then((data) => {
+      setTasks(prevTasks => prevTasks.map((task) => (task.id === data.id ? {...task, text: data.text} : task)))
+    });
     setEditingTask(null);
     setEditingText('');
   };
 
   const handleDeleteTask = (id) => {
-    deleteTask(id).then(() => setTasks(tasks.filter((task) => task.id !== id)));
+    deleteTask(id).then(() => setTasks(prevTasks => prevTasks.filter((task) => task.id !== id)));
   };
 
   return (
@@ -45,7 +45,7 @@ function App() {
       </InputGroup>
 
       <ListGroup>
-        {tasks.map((task) => (
+        {tasks && tasks.map((task) => (
           <ListGroup.Item key={task.id} className="d-flex justify-content-between align-items-center">
             {editingTask && editingTask.id === task.id ? (
               <div>
@@ -56,7 +56,9 @@ function App() {
               <div>
                 <span>{task.text}</span>
                 <Button variant="warning" className="mx-2" onClick={() => handleEditTask(task)}>Edit</Button>
-                <Button variant="danger" onClick={() => handleDeleteTask(task.id)}>Delete</Button>
+                <Button variant="danger" onClick={() => {
+                  console.log("task",task);
+                  handleDeleteTask(task.id)}}>Delete</Button>
               </div>
             )}
           </ListGroup.Item>
