@@ -1,4 +1,3 @@
-// Endpoint của API backend
 import axios from 'axios';
 const API_ENDPOINT = 'http://localhost:3006';
 
@@ -21,10 +20,10 @@ export const addTask = (task) => {
 
 // Hàm để cập nhật một công việc
 export const updateTask = (id, task) => {
-  return axios.post(`${API_ENDPOINT}/todo/update/${id}`, task).then((response) => response.data);
+  return axios.put(`${API_ENDPOINT}/todo/${id}`, task).then((response) => response.data);
 };
 
 //Hàm để xóa một công việc
 export const deleteTask = (id) => {
-  return axios.post(`${API_ENDPOINT}/todo/delete/${id}`).then((response) => response.data);
+  return axios.delete(`${API_ENDPOINT}/todo/${id}`).then((response) => response.data);
 };
