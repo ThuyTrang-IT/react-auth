@@ -18,6 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prod": "pm2 start 'npm start' --name todoApp --no-daemon --log-date-format='MM-DD hh:mm:ss.SSS A'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
