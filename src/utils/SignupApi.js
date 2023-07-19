@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL = 'http://localhost:3006'; // Đường dẫn đến server API
+const BASE_URL = 'http://trangpham.gcalls.vn/api'; // Đường dẫn đến server API
 
 export const register = async (email, password) => {
   try {
