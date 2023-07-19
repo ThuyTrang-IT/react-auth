@@ -1,4 +1,4 @@
-import axios from 'axios';
+//import axios from 'axios';
 const BASE_URL = 'http://trangpham.gcalls.vn/api'; // Đường dẫn đến server API
 
 export const register = async (email, password) => {
